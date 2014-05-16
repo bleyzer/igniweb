@@ -1,6 +1,6 @@
 'use strict';
 
-var appIgni = angular.module('igniwebApp', [
+var igniwebApp = angular.module('igniwebApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -8,7 +8,7 @@ var appIgni = angular.module('igniwebApp', [
   ])
 
 
-  appIgni.config(function ($routeProvider) {
+  igniwebApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
