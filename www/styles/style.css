@@ -1,0 +1,196 @@
+body{
+background: #D6D6D6; /* Old browsers */
+height: 100%;
+}
+
+@font-face{
+	font-family: fjalla;
+	src: url(../fonts/FjallaOne-Regular.otf);
+}
+
+
+#wrap{
+	padding-right: 15px;
+	padding-left: 15px;
+    background-color: white;
+}
+
+#container{
+	min-height: 100%;
+	position:relative;
+	clear: both;
+}
+
+.navbar-default{
+	background-color: #E94B35;
+	background-image: url(../images/label.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 0px !important;
+} 
+
+.navbar-toggle{
+	margin-right: 0px !important;
+	margin-left: 15px !important;
+	border: 0px !important; 
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: white;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+	color: black;
+	background-color: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 12px;
+}
+
+.img-responsive{
+	width: 100% !important;
+}
+
+.spacing{
+	height: 200px;
+}
+
+#slogan{
+	color: white;
+	font-family: fjalla;
+	font-size: 24px;
+	background: #fcfcfc; /* Old browsers */
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(left, #fcfcfc 0%, #a0a0a0 15%, #a0a0a0 85%, #fcfcfc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fcfcfc), color-stop(15%,#a0a0a0), color-stop(85%,#a0a0a0), color-stop(100%,#fcfcfc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #fcfcfc 0%,#a0a0a0 15%,#a0a0a0 85%,#fcfcfc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #fcfcfc 0%,#a0a0a0 15%,#a0a0a0 85%,#fcfcfc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #fcfcfc 0%,#a0a0a0 15%,#a0a0a0 85%,#fcfcfc 100%); /* IE10+ */
+	background: linear-gradient(to right, #fcfcfc 0%,#a0a0a0 15%,#a0a0a0 85%,#fcfcfc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#fcfcfc',GradientType=1 ); /* IE6-9 */
+}
+
+#content-text-home{
+	font-size: 16px;
+	color: gray;
+	font-family: fjalla;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+#footer{
+	position: relative;
+	height: 250px;
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(top, #fcfcfc 0%, #d6d6d6 26%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(26%,#d6d6d6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fcfcfc 0%,#d6d6d6 26%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fcfcfc 0%,#d6d6d6 26%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fcfcfc 0%,#d6d6d6 26%); /* IE10+ */
+	background: linear-gradient(to bottom, #fcfcfc 0%,#d6d6d6 26%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+}
+
+.title-pages{
+	color: #CC402A;
+	font-size: 28px;
+	font-family:fjalla; 
+}
+
+
+/* Page Contact */
+
+.contact-name{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.contact-charge{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Close Page Contact */
+
+
+/* Page The Problems */
+.problems-content{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Close Page The Problems */
+
+/* Page Our Solutions */
+.our-solution-content{
+	font-size: 24px;
+	font-weight: bold;
+}
+/* Close Page Our Solutions */
+
+/* Page Experience */
+	/*img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	map,area{
+		outline: 1px solid red;
+		background: #EEE;
+	}*/
+
+/* Close Page Experience */
+
+
+
+
+
+
+
+
+/* Section colors*/
+
+.color-white{
+	color: white;
+}
+
+.color-orange{
+	color: orange;
+}
+
+.color-gray-l{
+	color: #b2b2b2;
+}
+
+.color-gray{
+	color: 	#666666;
+}
+
+/* Spacing */
+.height-10{
+	height: 10px;
+}
+.height-20{
+	height: 20px;
+}
+
+.height-50px{
+	height: 50px;
+}
+
