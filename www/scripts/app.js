@@ -4,6 +4,8 @@ var igniwebApp = angular.module('igniwebApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
+    'snap',
+    'ngAnimate',
     'ngRoute'
   ])
 
@@ -57,6 +59,10 @@ var igniwebApp = angular.module('igniwebApp', [
       .when('/what_do_we_want', {
         templateUrl: 'views/what_do_we_want.html',
         controller: 'What_do_we_wantController'
+      })
+      .when('/communication', {
+        templateUrl: 'views/communication.html',
+        controller: 'Google_Plus'
       })
       .otherwise({
         redirectTo: '/'

@@ -12,12 +12,27 @@ angular.module('igniwebApp')
 
 function HomeController($scope){
 	$scope.base = {title: 'FUELING THE WEB',subtitle: 'Your Ecommerce Software House Partner'};
+
+      console.log('Entre al controlador');
+
+    $scope.verifyMove=function(){
+
+                $scope.snapRemote.getSnapper().then(function(snapper) {
+                  snapper.open('left');
+                  });
+
+                  $scope.snapRemote.getSnapper().then(function(snapper) {
+                     snapper.close();
+                 });
+   
+    };
+    
 };
 
 
 function ContactController($scope){
 	$scope.base = {title: 'CONTACT'};
-	$scope.contacts = [{name: 'Pablo Velásquez', charge: 'C.E.O', email: 'pablo@igniweb.com'},{name: 'Fabian Acosta', charge: 'Production Manager', email: 'fabian@igniweb.com'},{name: 'Alex Bárcenas', charge: 'Marketing Director', email: 'alex@igniweb.com'}];
+	$scope.contacts = [{name: 'Pablo Velásquez', charge: 'C.E.O', email: 'pablo@igniweb.com', photo:'images/contact1.png'},{name: 'Fabian Acosta', charge: 'Production Manager', email: 'fabian@igniweb.com', photo:'images/contact2.png'},{name: 'Alex Bárcenas', charge: 'Marketing Director', email: 'alex@igniweb.com', photo:'images/contact3.png'}];
 };
 
 
@@ -69,3 +84,29 @@ function What_do_we_wantController($scope){
 	$scope.base = {title: 'WHAT DO WE WANT?'};
 	$scope.paragraphs = [{content: 'We want to be your partner and establish a long term business relationship!'},{content: 'We want to help your business grow and increase you profits having our experienced team as your best ally.'}];
 };
+
+function Google_Plus($scope,$http){
+	var $promise = $http({ method: 'GET', url: 'https://www.googleapis.com/plus/v1/people/108688077431561469128/activities/public?maxResults=99&key=AIzaSyA3eWBMYJ1YjTPp1mfCdKw--_ZkrtUw6x0'});
+
+
+	$promise.then(function(response){
+
+                if(response.status!="200")
+                    scope.txtData='Server issues, please again.';
+                else if(response.data=="0")
+                    scope.txtData='No deals found.';
+                else //if (typeof(response.data.image) !== "undefined")
+                {	
+                   // scope.data = response.data;
+                  	var dataGooglePlus = new Array();
+
+                  	$scope.dataGooglePlus = response.data.items;
+                  	
+
+                      $scope.data = 	response.data.item;
+              	     console.log($scope.dataGooglePlus);
+
+                }
+
+            });
+}

@@ -1,0 +1,38 @@
+<div header-directive></div>
+
+    <div id="wrap">
+        
+        <div id="container-contact" class="container">
+            <div class="height-20">&nbsp;</div>
+            <div class="title-pages">Google Plus</div>
+            <div class="height-20">&nbsp;</div>
+
+            <div ng-repeat="dataGoogle in dataGooglePlus">
+                <div class="container" style="border: 1px solid #c2c2c2;">
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-2 text-center">
+                                <img src="{{dataGoogle.actor.image.url}}" width="50" height="50">
+                            </div>   
+                            <div class="col-xs-10">
+                                <div><b>{{dataGoogle.actor.displayName}}</b></div>
+                                <div>Se compartió públicamente: {{dataGoogle.updated}}</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div>{{dataGoogle.title}}</div>
+                    <br>
+                    <img src="{{dataGoogle.object.attachments[0].image.url}}" class="img-responsive">
+                    <br>
+                </div>
+                <br>
+            </div>
+        </div>
+
+    </div>
+
+    <!--aqui comienza el pie de pagina -->
+    <div id="footer" class="container">&nbsp;</div>
