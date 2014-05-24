@@ -12,7 +12,6 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/angular-snap/angular-snap.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -22,11 +21,51 @@
 
     <!-- endbuild -->
   </head>
-  <body ng-app="igniwebApp">
+  <body ng-app="igniwebApp" onload="init();">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script type="text/javascript">
+        function init() {
+            document.addEventListener("deviceready", initPushwoosh, true);
 
+            console.log("inicio2");
+            //rest of the code
+        }
+
+       function initPushwoosh()
+        {
+            var pushNotification = window.plugins.pushNotification;
+
+            console.log("inicio");
+         
+            //set push notifications handler
+            document.addEventListener('push-notification', function(event) {
+                var title = event.notification.title;
+                var userData = event.notification.userdata;
+                                         
+                if(typeof(userData) != "undefined") {
+                    console.warn('user data: ' + JSON.stringify(userData));
+                }
+                                             
+                alert(title);
+            });
+         
+            //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
+            pushNotification.onDeviceReady({ projectid: "777461541962", appid : "573B9-30D2E" });
+         
+            //register for pushes
+            pushNotification.registerDevice(
+                function(status) {
+                    var pushToken = status;
+                    console.warn('push token: ' + pushToken);
+                },
+                function(status) {
+                    console.warn(JSON.stringify(['failed to register ', status]));
+                }
+            );
+        }
+    </script>
     <!-- Add your site or application content here -->
     <div ng-view=""></div>
 
@@ -45,6 +84,7 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="cordova.js"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -55,23 +95,20 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/i18n/angular-locale_es-co.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+
+
 
 
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="bower_components/angular-snap/angular-snap.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/headerDirective.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-
-        <script type="text/javascript">
-            var snapper = new Snap({
-               element: document.getElementById('content')
-             });
-        </script>
         <!-- endbuild -->
 </body>
 </html>

@@ -4,13 +4,17 @@
         
         <div id="container-contact" class="container" ng-controller="What_do_we_wantController">
             <div class="height-20">&nbsp;</div>
-            <div class="title-pages">{{base.title}}</div>
+            <div class="title-pages">{{'TITLE_WDWW' | translate}}</div>
             <hr>
-            <div ng-repeat="paragraph in paragraphs">
+            
                   <div class="height-20">&nbsp;</div>
-                  <div class="text-center problems-content color-gray">{{paragraph.content}}</div> 
+                  <div class="text-center problems-content color-gray">{{'WDWW_1P' | translate}}</div> 
                   <div class="height-20">&nbsp;</div>
-             </div>
+
+                  <div class="height-20">&nbsp;</div>
+                  <div class="text-center problems-content color-gray">{{'WDWW_2P' | translate}}</div> 
+                  <div class="height-20">&nbsp;</div>
+             
         </div>
 
     </div>

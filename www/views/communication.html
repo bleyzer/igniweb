@@ -17,7 +17,7 @@
                             </div>   
                             <div class="col-xs-10">
                                 <div><b>{{dataGoogle.actor.displayName}}</b></div>
-                                <div>Se compartió públicamente: {{dataGoogle.updated}}</div>
+                                <div>Se compartió públicamente. {{dataGoogle.updated | date:'fullDate'}} a las {{dataGoogle.updated | date:'shortTime'}}</div>
                             </div>
 
                         </div>
@@ -25,7 +25,8 @@
                     <br>
                     <div>{{dataGoogle.title}}</div>
                     <br>
-                    <img src="{{dataGoogle.object.attachments[0].image.url}}" class="img-responsive">
+                    <div ng-show="dataGoogle.object.attachments[0].image.url"><img src="{{dataGoogle.object.attachments[0].image.url}}" class="img-responsive"></div>
+                    <div ng-show="dataGoogle.object.attachments[0].thumbnails[0].image.url"><img src="{{dataGoogle.object.attachments[0].thumbnails[0].image.url}}" class="img-responsive"></div>
                     <br>
                 </div>
                 <br>

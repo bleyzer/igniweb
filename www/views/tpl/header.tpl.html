@@ -1,29 +1,29 @@
  <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse" snap-toggle="left">
+          <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span class="color-white"> < </span><span class="color-orange">IGNI</span><span class="color-white">WEB</span><span class="color-orange"> > </span></a>
+          <a class="navbar-brand" href="#"><span class="color-white"> < </span><span class="color-orange">IGNI</span><span class="color-white">WEB</span><span class="color-orange"> > </span></a><div class="text-right" style="padding-right:10px;"> <span ng-click="cambiarIdioma('es')" translate>ES </span> <span ng-click="cambiarIdioma('en')" translate>EN</span> </div>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a ng-href="#">Home</a></li>
-            <li><a ng-href="#contact">Contact</a></li>
-            <li><a ng-href="#the_problems">The Problems</a></li>
-            <li><a ng-href="#our_solutions">Our Solution</a></li>
-            <li><a ng-href="#communication">Communication</a></li>
-            <li><a ng-href="#experience">Experience in</a></li>
-            <li><a ng-href="#bussines_model">Bussines Model</a></li>
-            <li><a ng-href="#clients">Clients</a></li>
-            <li><a ng-href="#the_team">The Team</a></li>
-            <li><a ng-href="#team">Team</a></li>
-            <li><a ng-href="#competition">Competition</a></li>
-            <li><a ng-href="#our_strengths">Our Strengths</a></li>
-            <li><a ng-href="#what_do_we_want">What Do We Want?</a></li>
+          <ul class="nav navbar-nav" ng-controller="MenuController">
+            <li><a ng-href="#">{{'LINK_HOME' | translate}}</a></li>
+            <li><a ng-href="#contact">{{'LINK_CONTACT' | translate}}</a></li>
+            <li><a ng-href="#the_problems">{{'LINK_THEPROBLEMS' | translate}}</a></li>
+            <li><a ng-href="#our_solutions">{{'LINK_OURSOLUTION' | translate}}</a></li>
+            <li><a ng-href="#communication">{{'LINK_COMMUNICATION' | translate}}</a></li>
+            <li><a ng-href="#experience">{{'LINK_EXPERIENCEIN' | translate}}</a></li>
+            <li><a ng-href="#bussines_model">{{'LINK_BUSSINESMODEL' | translate}}</a></li>
+            <li><a ng-href="#clients">{{'LINK_CLIENTS' | translate}}</a></li>
+            <li><a ng-href="#the_team">{{'LINK_THETEAM' | translate}}</a></li>
+            <li><a ng-href="#team">{{'LINK_TEAM' | translate}}</a></li>
+            <li><a ng-href="#competition">{{'LINK_COMPETITION' | translate}}</a></li>
+            <li><a ng-href="#our_strengths">{{'LINK_OURSTRENGTHS' | translate}}</a></li>
+            <li><a ng-href="#what_do_we_want">{{'LINK_WDWW' | translate}}</a></li>
           </ul>
         </div>             <!--/.nav-collapse -->
       </div>

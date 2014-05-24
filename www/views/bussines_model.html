@@ -4,15 +4,21 @@
         
         <div id="container-contact" class="container" ng-controller="Bussines_modelController">
             <div class="height-20">&nbsp;</div>
-            <div class="title-pages">BUSSINES MODEL</div>
+            <div class="title-pages">{{'TITLE_BUSSINESMODEL' | translate}}</div>
             <hr>
 
             <div class="container">
-                <div ng-repeat="model in models">
-                    <div class="our-solution-content">{{model.title}}</div>
-                    <div class="our-solution-content color-gray-l">{{model.subtitle}}</div>
+                
+                    <div class="our-solution-content">{{'BUSSINESMODEL_1T' | translate}}</div>
                     <hr>
-                </div>
+                
+                    <div class="our-solution-content">{{'BUSSINESMODEL_2T' | translate}}</div>
+                    <div class="our-solution-content color-gray-l">{{'BUSSINESMODEL_2S' | translate}}</div>
+                    <hr>
+
+                    <div class="our-solution-content">{{'BUSSINESMODEL_3T' | translate}}</div>
+                    <div class="our-solution-content color-gray-l">{{'BUSSINESMODEL_3S' | translate}}</div>
+                    <hr>
             </div>
         </div>
 

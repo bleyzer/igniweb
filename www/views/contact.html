@@ -4,27 +4,54 @@
         
         <div id="container-contact" class="container" ng-controller="ContactController">
             <div class="height-20"></div>
-            <div class="title-pages">{{base.title}}</div>
+            <div class="title-pages">{{'TITULO_CONTACT' | translate}}</div>
             <div class="height-20"></div>
             <div class="row">
                 <div class="col-xs-12">&nbsp;</div>
             </div>
 
 
-            <div ng-repeat="contact in contacts">
                 <div class="row text-center">
                     <div class="col-xs-12 col-sm-4">
-                        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="{{contact.photo}}" style="width: 140px; height: 140px;">
+                        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="images/contact1.png" style="width: 140px; height: 140px;">
                     </div>
 
                     <div class="col-xs-12 col-sm-8">
-                        <div class="contact-name">{{contact.name}}</div>
-                        <div class="contact-charge color-gray-l">{{contact.charge}}</div>
-                        <div class="contact-email color-gray-l">{{contact.email}}</div>
+                        <div class="contact-name">Pablo Velásquez</div>
+                        <div class="contact-charge color-gray-l">{{'CARGO_CEO' | translate}}</div>
+                        <div class="contact-email color-gray-l">pablo@igniweb.com</div>
                     </div>
                 </div>  
                 <hr>
-            </div>
+
+
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="images/contact2.png" style="width: 140px; height: 140px;">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="contact-name">Fabian Acosta</div>
+                        <div class="contact-charge color-gray-l">{{'CARGO_PRODUCTIONMANAGER' | translate}}</div>
+                        <div class="contact-email color-gray-l">fabian@igniweb.com</div>
+                    </div>
+                </div>  
+                <hr>
+
+
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-4">
+                        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="images/contact3.png" style="width: 140px; height: 140px;">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="contact-name">Alex Bárcenas</div>
+                        <div class="contact-charge color-gray-l">{{'CARGO_MARKETINGDIRECTOR' | translate}}</div>
+                        <div class="contact-email color-gray-l">alex@igniweb.com</div>
+                    </div>
+                </div>  
+                <hr>
+           
 
         </div>
 

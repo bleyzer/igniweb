@@ -1,14 +1,5 @@
-<snap-drawer snap-toggle="left">
-  <div class="wrap" menu-directive></div>
-</snap-drawer>
-
-
 <div header-directive></div>
 
-
-<snap-content ng-click="verifyMove()" data-snap-ignore="true"> 
-
-<div ng-controller="HomeController">
     <div id="wrap">
         
         <div id="container" class="container text-center">
@@ -19,14 +10,11 @@
             </div>
         </div>
         <div class="height-50">&nbsp;</div>
-        <div id="slogan" class="text-center">{{base.title}}</div>
+        <div id="slogan" class="text-center">{{'TITULO_HOME' | translate}}</div>
         <div class="height-10">&nbsp;</div>
-        <div id="content-text-home" class="text-center">{{base.subtitle}}</div>
+        <div id="content-text-home" class="text-center">{{'SUBTITLE_HOME' | translate}}</div>
 
     </div>
 
     <!--aqui comienza el pie de pagina -->
     <div id="footer" class="container">&nbsp;</div>
-</div>
-
-</snap-content>
